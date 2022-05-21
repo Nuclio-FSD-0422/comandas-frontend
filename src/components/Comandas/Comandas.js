@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import AddComanda from './AddComanda/AddComanda';
+
 const Comandas = () => {
   // Usamos un useState para almacenar la info de todas las comandas en un array
   const [comandas, setComandas] = useState([]);
@@ -39,6 +41,10 @@ const Comandas = () => {
           )
         } )
       }
+      <div>
+        <h2>Añadir nueva comanda</h2>
+        <AddComanda updateList={getComandas} />
+      </div>
     </div>
   )
 }
